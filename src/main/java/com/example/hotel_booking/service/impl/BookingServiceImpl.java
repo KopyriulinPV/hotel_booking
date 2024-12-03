@@ -1,6 +1,6 @@
 package com.example.hotel_booking.service.impl;
 
-import com.example.hotel_booking.DTO.statistics.RoomBookingEvent;
+import com.example.hotel_booking.dto.statistics.RoomBookingEvent;
 import com.example.hotel_booking.mapper.statistics.StatisticsMapper;
 import com.example.hotel_booking.model.Booking;
 import com.example.hotel_booking.repository.BookingRepository;

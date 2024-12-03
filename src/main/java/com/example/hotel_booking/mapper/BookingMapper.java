@@ -1,6 +1,6 @@
 package com.example.hotel_booking.mapper;
 
-import com.example.hotel_booking.DTO.*;
+import com.example.hotel_booking.dto.*;
 import com.example.hotel_booking.model.Booking;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;

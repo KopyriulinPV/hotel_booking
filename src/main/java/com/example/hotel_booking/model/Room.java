@@ -23,6 +23,11 @@ public class Room {
     private int maxOccupancy;
 
     @ElementCollection
+    @CollectionTable(
+            name = "rooms_unavailable_dates",
+            joinColumns = @JoinColumn(name = "room_id")
+    )
+    @Column(name = "unavailable_dates")
     private List<LocalDate> unavailableDates;
 
     @ManyToOne

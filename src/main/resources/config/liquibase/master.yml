@@ -1,0 +1,181 @@
+databaseChangeLog:
+  - logicalFilePath: config/liquibase/master.yml
+  - changeSet:
+      id: 1
+      author: peter
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(50)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    check: "role IN ('ROLE_ADMIN', 'ROLE_USER')"
+
+  - changeSet:
+      id: 2
+      author: peter
+      changes:
+        - createTable:
+            tableName: hotels
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: hotel_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: headline
+                  type: varchar(255)
+              - column:
+                  name: city
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: distance_from_center
+                  type: double
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rating
+                  type: double
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rating_count
+                  type: int
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 3
+      author: peter
+      changes:
+        - createTable:
+            tableName: rooms
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: description
+                  type: text
+              - column:
+                  name: room_number
+                  type: varchar(255)
+              - column:
+                  name: price
+                  type: double
+              - column:
+                  name: max_occupancy
+                  type: int
+              - column:
+                  name: hotel_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_room_hotel
+                    references: hotels(id)
+
+  - changeSet:
+      id: 4
+      author: peter
+      changes:
+        - createTable:
+            tableName: rooms_unavailable_dates
+            columns:
+              - column:
+                  name: room_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_unavailable_dates_room
+                    references: rooms(id)
+              - column:
+                  name: unavailable_dates
+                  type: date
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 5
+      author: peter
+      changes:
+        - createTable:
+            tableName: booking
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: check_in_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: check_out_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: room_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_booking_room
+                    references: rooms(id)
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_booking_user
+                    references: users(id)

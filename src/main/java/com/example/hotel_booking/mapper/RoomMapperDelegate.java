@@ -1,7 +1,7 @@
 package com.example.hotel_booking.mapper;
 
-import com.example.hotel_booking.DTO.RoomRequestDTO;
-import com.example.hotel_booking.DTO.RoomResponseDTO;
+import com.example.hotel_booking.dto.RoomRequestDTO;
+import com.example.hotel_booking.dto.RoomResponseDTO;
 import com.example.hotel_booking.model.Room;
 import com.example.hotel_booking.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;

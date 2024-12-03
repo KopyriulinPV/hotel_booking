@@ -6,8 +6,11 @@ spring:
     bootstrap-servers: localhost:9092
   main:
     allow-circular-references: true
+  liquibase:
+    change-log: classpath:config/liquibase/master.yml
   jpa:
-    generate-ddl: true
+    hibernate:
+      ddl-auto: none
   datasource:
     url: jdbc:postgresql://localhost:5432/hotel_booking
     username: postgres

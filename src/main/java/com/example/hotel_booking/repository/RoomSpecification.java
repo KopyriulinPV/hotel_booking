@@ -1,6 +1,6 @@
 package com.example.hotel_booking.repository;
 
-import com.example.hotel_booking.DTO.RoomFilter;
+import com.example.hotel_booking.dto.RoomFilter;
 import com.example.hotel_booking.model.Booking;
 import com.example.hotel_booking.model.Room;
 import jakarta.persistence.criteria.Predicate;

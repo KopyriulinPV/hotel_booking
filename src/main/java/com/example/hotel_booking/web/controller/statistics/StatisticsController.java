@@ -20,14 +20,14 @@ public class StatisticsController {
 
     @GetMapping("/bookingSt")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')")
-    public ResponseEntity<List<StatisticsBooking>> getAllBooking() {
-        return ResponseEntity.ok(statisticsService.findAll());
+    public List<StatisticsBooking> getAllBooking() {
+        return statisticsService.findAll();
     }
 
     @GetMapping("/usersSt")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')")
-    public ResponseEntity<List<StatisticsCreateUser>> getAllCreateUser() {
-        return ResponseEntity.ok(statisticsService.findAll2());
+    public List<StatisticsCreateUser> getAllCreateUser() {
+        return statisticsService.findAll2();
     }
 
 

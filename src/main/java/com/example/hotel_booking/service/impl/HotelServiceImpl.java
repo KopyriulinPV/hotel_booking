@@ -1,6 +1,6 @@
 package com.example.hotel_booking.service.impl;
 
-import com.example.hotel_booking.DTO.HotelFilter;
+import com.example.hotel_booking.dto.HotelFilter;
 import com.example.hotel_booking.model.Hotel;
 import com.example.hotel_booking.repository.HotelRepository;
 import com.example.hotel_booking.repository.HotelSpecification;

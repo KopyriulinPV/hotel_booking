@@ -1,6 +1,6 @@
 package com.example.hotel_booking.service.statistics;
 
-import com.example.hotel_booking.DTO.statistics.RoomBookingEvent;
+import com.example.hotel_booking.dto.statistics.RoomBookingEvent;
 import com.example.hotel_booking.mapper.statistics.StatisticsMapper;
 import com.example.hotel_booking.repository.statistics.StatisticsRepositoryBooking;
 import lombok.RequiredArgsConstructor;

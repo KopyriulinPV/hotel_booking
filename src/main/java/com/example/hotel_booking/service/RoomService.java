@@ -1,6 +1,6 @@
 package com.example.hotel_booking.service;
 
-import com.example.hotel_booking.DTO.RoomFilter;
+import com.example.hotel_booking.dto.RoomFilter;
 import com.example.hotel_booking.model.Room;
 import java.util.List;
 

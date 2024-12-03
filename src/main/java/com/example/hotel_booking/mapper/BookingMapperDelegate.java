@@ -1,7 +1,7 @@
 package com.example.hotel_booking.mapper;
 
-import com.example.hotel_booking.DTO.BookingRequestDTO;
-import com.example.hotel_booking.DTO.BookingResponseDTO;
+import com.example.hotel_booking.dto.BookingRequestDTO;
+import com.example.hotel_booking.dto.BookingResponseDTO;
 import com.example.hotel_booking.model.Booking;
 import com.example.hotel_booking.service.RoomService;
 import com.example.hotel_booking.service.UserService;

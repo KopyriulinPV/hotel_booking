@@ -1,7 +1,7 @@
 package com.example.hotel_booking.mapper.statistics;
 
-import com.example.hotel_booking.DTO.statistics.CreateUserEvent;
-import com.example.hotel_booking.DTO.statistics.RoomBookingEvent;
+import com.example.hotel_booking.dto.statistics.CreateUserEvent;
+import com.example.hotel_booking.dto.statistics.RoomBookingEvent;
 import com.example.hotel_booking.model.Booking;
 import com.example.hotel_booking.model.User;
 
