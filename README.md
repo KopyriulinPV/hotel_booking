@@ -1,6 +1,6 @@
 Бэкенд-составляющая сервиса бронирования отелей с возможностью управлять контентом. 
 
-Используемые технологии: Spring Web MVC, Spring Data JPA, Spring security, Mongodb, Kafka, Postgresql. 
+Используемые технологии: Spring Web MVC, Spring Data JPA, Spring security, MongoDB, Kafka, PostgreSQL. 
 
 Для запуска приложения необходим Docker:
 
